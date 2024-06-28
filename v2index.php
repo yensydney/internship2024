@@ -44,7 +44,7 @@
         $username = filter_input(INPUT_POST, "username", FILTER_SANITIZE_SPECIAL_CHARS);
         $password = filter_input(INPUT_POST, "password", FILTER_SANITIZE_SPECIAL_CHARS);
 
-        echo 'Hi, ' . $firstname . ', ' . $lastname;
+        echo 'Hi, ' . $firstname . ', ' . $lastname . '<br>';
 
 
         // $hash = password_hash($password, PASSWORD_DEFAULT);
@@ -56,6 +56,7 @@
         $result = mysqli_query($conn, $sql); // WHY DOES THIS LINE CAUSE AN ERROR???
         $resultarray = mysqli_fetch_all($result);
 
+        echo 'printing result' . '<br>';
         foreach($resultarray as $entries) {
             foreach($entries as $field) {
                 echo $field;
