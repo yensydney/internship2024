@@ -11,7 +11,7 @@
     <form action="<?php htmlspecialchars($_SERVER["PHP_SELF"])?>" method="post">
         <h2>Sign-up</h2>
         First Name:<br>
-        <input type="text" name="firstname" required><br>
+        <input type="text" name="firstname"><br>
         Last Name:<br>
         <input type="text" name="lastname"><br>
         Username:<br>
@@ -44,7 +44,7 @@
         $username = filter_input(INPUT_POST, "username", FILTER_SANITIZE_SPECIAL_CHARS);
         $password = filter_input(INPUT_POST, "password", FILTER_SANITIZE_SPECIAL_CHARS);
 
-        echo 'Hi, ' . $firstname . ', ' . $lastname . '<br>';
+        echo 'Hi, ' . $firstname . ', ' . $lastname . $username . '<br>';
 
 
         // $hash = password_hash($password, PASSWORD_DEFAULT);
@@ -52,8 +52,8 @@
         // echo 'inside1';
 
         // // why does this make the script quit????
-        // $sql = "SELECT * FROM Student where Username like $username";
-        $sql = "SELECT * FROM Student";
+        $sql = "SELECT * FROM Student where Username like $username";
+        // $sql = "SELECT * FROM Student";
         $result = mysqli_query($conn, $sql); // WHY DOES THIS LINE CAUSE AN ERROR???
         $resultarray = mysqli_fetch_all($result);
 
