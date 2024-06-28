@@ -29,9 +29,9 @@
         <input type="submit" name="submit" value="Submit">
     </form> -->
 <?php
-    echo 'hi';
+    // echo 'hi';
     if($_SERVER["REQUEST_METHOD"] == "POST") {
-        echo 'inside';
+        // echo 'inside';
         $firstname = filter_input(INPUT_POST, "firstname", FILTER_SANITIZE_SPECIAL_CHARS);
         $lastname = filter_input(INPUT_POST, "lastname", FILTER_SANITIZE_SPECIAL_CHARS);
         $username = filter_input(INPUT_POST, "username", FILTER_SANITIZE_SPECIAL_CHARS);
