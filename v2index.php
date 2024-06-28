@@ -13,11 +13,11 @@
         First Name:<br>
         <input type="text" name="firstname" required><br>
         Last Name:<br>
-        <input type="text" name="lastname" required><br>
+        <input type="text" name="lastname"><br>
         Username:<br>
-        <input type="text" name="username" required><br>
+        <input type="text" name="username"><br>
         Password:<br>
-        <input type="Password" name="password" required><br>
+        <input type="Password" name="password"><br>
         <input type="submit" name="submit" value="Submit">
     </form>
     <!-- <form action="" method="post">
@@ -40,10 +40,10 @@
 
         echo 'Hi, ' . $firstname . ', ' . $lastname;
 
-        // $firstname = filter_input(INPUT_POST, "firstname", FILTER_SANITIZE_SPECIAL_CHARS);
-        // $lastname = filter_input(INPUT_POST, "lastname", FILTER_SANITIZE_SPECIAL_CHARS);
-        // $username = filter_input(INPUT_POST, "username", FILTER_SANITIZE_SPECIAL_CHARS);
-        // $password = filter_input(INPUT_POST, "password", FILTER_SANITIZE_SPECIAL_CHARS);
+        $firstname = filter_input(INPUT_POST, "firstname", FILTER_SANITIZE_SPECIAL_CHARS);
+        $lastname = filter_input(INPUT_POST, "lastname", FILTER_SANITIZE_SPECIAL_CHARS);
+        $username = filter_input(INPUT_POST, "username", FILTER_SANITIZE_SPECIAL_CHARS);
+        $password = filter_input(INPUT_POST, "password", FILTER_SANITIZE_SPECIAL_CHARS);
 
         // // $hash = password_hash($password, PASSWORD_DEFAULT);
         // // mysqli_query(mysqli $mysql, string $query, int $result_mode = MYSQLI_STORE_RESULT): mysqli_result|bool
