@@ -54,7 +54,7 @@
         // // why does this make the script quit????
         $sql = "SELECT * FROM Student where Username like $username";
         // $sql = "SELECT * FROM Student";
-        echo $sql . '<br>'
+        echo $sql . '<br>';
         $result = mysqli_query($conn, $sql); // WHY DOES THIS LINE CAUSE AN ERROR???
         $resultarray = mysqli_fetch_all($result);
 
