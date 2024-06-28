@@ -28,8 +28,6 @@
         <input type="Password" name="password1" required><br>
         <input type="submit" name="submit" value="Submit">
     </form> -->
-</body>
-</html>
 <?php
     echo 'hi';
     if($_SERVER["REQUEST_METHOD"] == "POST") {
@@ -42,8 +40,10 @@
                 VALUES ('$firstname', '$lastname', '$username', '$password')";
         mysqli_query($conn, $sql);
         echo"You are now registered!";
-    xs
+    
     }
 
     mysqli_close($conn);
 ?>
+</body>
+</html>
