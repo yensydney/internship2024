@@ -1,5 +1,4 @@
 <?php
-
     $db_server = "localhost";
     $db_user = "ext_yensydney_gmail_com";
     $db_pass = '20050704';

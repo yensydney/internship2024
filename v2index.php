@@ -29,8 +29,6 @@
         <input type="submit" name="submit" value="Submit">
     </form> -->
 <?php
-    include('database.php');
-
     echo 'hi';
 
     if($_SERVER["REQUEST_METHOD"] == "POST") {
