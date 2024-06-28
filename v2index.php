@@ -47,14 +47,20 @@
         echo 'Hi, ' . $firstname . ', ' . $lastname;
 
 
-        // // $hash = password_hash($password, PASSWORD_DEFAULT);
-        // // mysqli_query(mysqli $mysql, string $query, int $result_mode = MYSQLI_STORE_RESULT): mysqli_result|bool
-        // // echo 'inside1';
+        // $hash = password_hash($password, PASSWORD_DEFAULT);
+        // mysqli_query(mysqli $mysql, string $query, int $result_mode = MYSQLI_STORE_RESULT): mysqli_result|bool
+        // echo 'inside1';
 
         // // why does this make the script quit????
-        // $sql = "SELECT * FROM Student where Username like $username";
-        // $result = mysqli_query($conn, $sql); // WHY DOES THIS LINE CAUSE AN ERROR???
-        // $resultarray = mysqli_fetch_all($result);
+        $sql = "SELECT * FROM Student where Username like $username";
+        $result = mysqli_query($conn, $sql); // WHY DOES THIS LINE CAUSE AN ERROR???
+        $resultarray = mysqli_fetch_all($result);
+
+        foreach($resultarray as $entries) {
+            foreach($entries as $field) {
+                echo $field;
+            }
+        }
 
 
         // if (empty($resultarray)) {
