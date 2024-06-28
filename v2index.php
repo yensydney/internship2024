@@ -38,7 +38,7 @@
 
     if($_SERVER["REQUEST_METHOD"] == "POST") {
 
-        echo 'Got POST. go inside';
+        echo 'Hi, ' . $firstname . ', ' . $lastname;
 
         // $firstname = filter_input(INPUT_POST, "firstname", FILTER_SANITIZE_SPECIAL_CHARS);
         // $lastname = filter_input(INPUT_POST, "lastname", FILTER_SANITIZE_SPECIAL_CHARS);
