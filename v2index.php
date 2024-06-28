@@ -38,12 +38,14 @@
 
     if($_SERVER["REQUEST_METHOD"] == "POST") {
 
-        echo 'Hi, ' . $firstname . ', ' . $lastname;
 
         $firstname = filter_input(INPUT_POST, "firstname", FILTER_SANITIZE_SPECIAL_CHARS);
         $lastname = filter_input(INPUT_POST, "lastname", FILTER_SANITIZE_SPECIAL_CHARS);
         $username = filter_input(INPUT_POST, "username", FILTER_SANITIZE_SPECIAL_CHARS);
         $password = filter_input(INPUT_POST, "password", FILTER_SANITIZE_SPECIAL_CHARS);
+
+        echo 'Hi, ' . $firstname . ', ' . $lastname;
+
 
         // // $hash = password_hash($password, PASSWORD_DEFAULT);
         // // mysqli_query(mysqli $mysql, string $query, int $result_mode = MYSQLI_STORE_RESULT): mysqli_result|bool
