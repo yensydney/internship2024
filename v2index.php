@@ -28,9 +28,6 @@
         <input type="Password" name="password1" required><br>
         <input type="submit" name="submit" value="Submit">
     </form> -->
-    
-</body>
-</html>
 <?php
     include('database.php');
 
@@ -94,3 +91,5 @@
 
     mysqli_close($conn);
 ?>
+</body>
+</html>
